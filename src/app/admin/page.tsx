@@ -123,7 +123,7 @@ export default function AdminDashboard() {
               <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-blue-500 rounded-none flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(147,51,234,0.3)]">
                 <Shield className="w-8 h-8 text-white" />
               </div>
-              <h1 className="text-2xl font-black tracking-widest uppercase italic">JudgeNode Admin</h1>
+              <h1 className="text-2xl font-black tracking-widest uppercase italic">JudgeNod Admin</h1>
               <p className="text-gray-400 text-sm mt-2 font-mono">Secure Access Terminal</p>
             </div>
 
@@ -179,7 +179,7 @@ export default function AdminDashboard() {
           <div className="w-8 h-8 bg-gradient-to-br from-purple-600 to-blue-500 flex items-center justify-center">
             <Shield className="w-4 h-4 text-white" />
           </div>
-          <span className="text-lg font-black tracking-widest uppercase italic">JudgeNode <span className="text-purple-400">Admin</span></span>
+          <span className="text-lg font-black tracking-widest uppercase italic">JudgeNod <span className="text-purple-400">Admin</span></span>
         </div>
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-2 px-3 py-1 bg-green-500/10 border border-green-500/20 text-green-500 text-xs font-bold uppercase tracking-widest">

@@ -26,7 +26,7 @@ export default function LandingPage() {
             <div className="w-8 h-8 bg-gradient-to-br from-purple-600 to-blue-500 rounded-none flex items-center justify-center">
               <Shield className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xl font-bold tracking-tight">JudgeNode</span>
+            <span className="text-xl font-bold tracking-tight">JudgeNod</span>
           </div>
           <a href="/admin" className="px-3 py-1 bg-purple-500/10 border border-purple-500/30 text-purple-400 text-xs font-black uppercase tracking-widest hover:bg-purple-500 hover:text-white transition-colors">
             Admin Panel
@@ -176,7 +176,7 @@ export default function LandingPage() {
             <StepItem 
               num="03" 
               title="AI Record Mint" 
-              text="Our JudgeNode AI assigns a score. Metadata is minted on-chain as a tamper-proof proof." 
+              text="Our JudgeNod AI assigns a score. Metadata is minted on-chain as a tamper-proof proof." 
               color="text-amber-500" 
               bg="bg-amber-950/20" 
               border="border-amber-600/30" 
@@ -235,7 +235,7 @@ export default function LandingPage() {
               pauseBetweenAnimations={1}
             />
             <p className="text-gray-400 mb-8 max-w-xl mx-auto md:mx-0">
-              Traditional judging is broken. JudgeNode leverages Solana to provide the first fair, automated, and immutable evaluation engine.
+              Traditional judging is broken. JudgeNod leverages Solana to provide the first fair, automated, and immutable evaluation engine.
             </p>
           </div>
 
@@ -251,9 +251,9 @@ export default function LandingPage() {
               </ul>
             </div>
 
-            {/* JudgeNode Card */}
+            {/* JudgeNod Card */}
             <div className="md:col-span-1 p-8 border border-white/10 bg-black/40 relative group overflow-hidden">
-              <h3 className="text-2xl font-black mb-8 text-purple-400 uppercase tracking-widest italic">JudgeNode Protocol</h3>
+              <h3 className="text-2xl font-black mb-8 text-purple-400 uppercase tracking-widest italic">JudgeNod Protocol</h3>
               <ul className="space-y-6">
                 <CompareItem text="Deterministic AI-driven evaluation" />
                 <CompareItem text="Immutable on-chain verification" />
@@ -289,7 +289,7 @@ export default function LandingPage() {
                     </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-[10px] font-black tracking-widest text-purple-400 uppercase mb-1">JudgeNode Proof</div>
+                  <div className="text-[10px] font-black tracking-widest text-purple-400 uppercase mb-1">JudgeNod Proof</div>
                   <div className="text-2xl font-black text-white">SCORE: 98</div>
                   <div className="text-[8px] font-mono text-gray-500 mt-2 truncate max-w-[120px]">SOL_CERT_4A...7Zp</div>
                 </div>
@@ -409,7 +409,7 @@ export default function LandingPage() {
           <div className="relative aspect-video rounded-none overflow-hidden border border-white/10 bg-white/5 p-8 flex items-center justify-center">
              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-blue-500/10 blur-3xl" />
              <pre className="text-xs md:text-sm font-mono text-purple-300">
-               {`// Submit to JudgeNode
+               {`// Submit to JudgeNod
 $ judge submission upload --repo ./my-dapp
 ⠋ Validating repository...
 ✔ Metadata extracted
@@ -433,7 +433,7 @@ $ judge submission upload --repo ./my-dapp
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-black mb-6 uppercase tracking-tighter">
               <VariableProximity
-                label="EXPLORE THE JUDGENODE SDK"
+                label="EXPLORE THE JUDGENOD SDK"
                 className="variable-proximity-demo"
                 fromFontVariationSettings="'wght' 400, 'opsz' 9"
                 toFontVariationSettings="'wght' 1000, 'opsz' 40"
@@ -443,7 +443,7 @@ $ judge submission upload --repo ./my-dapp
               />
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
-              Everything you need to interact with the JudgeNode protocol, right from your terminal. 
+              Everything you need to interact with the JudgeNod protocol, right from your terminal. 
               Deploy, verify, and mint certificates with one command.
             </p>
           </div>
@@ -461,7 +461,7 @@ $ judge submission upload --repo ./my-dapp
           Join the Chain
         </button>
           <p className="text-xs text-gray-500 font-mono tracking-widest uppercase">
-            &copy; 2026 JudgeNode. Built with 100xDevs Mindset.
+            &copy; 2026 JudgeNod. Built with 100xDevs Mindset.
           </p>
       </footer>
     </main>

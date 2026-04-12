@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "JudgeNode | Tamper-Proof Hackathon Infrastructure",
+  title: "JudgeNod | Tamper-Proof Hackathon Infrastructure",
   description: "The decentralized judging engine for hackathons built on Solana. Automated analysis, on-chain verification, and immutable proofs of builder excellence.",
 };
 
