@@ -9,10 +9,14 @@ import ScrambledText from "@/components/ScrambledText";
 import Shuffle from "@/components/Shuffle";
 import TextType from "@/components/TextType";
 import DecryptedText from "@/components/DecryptedText";
+import TerminalCLI from "@/components/TerminalCLI";
+import VariableProximity from "@/components/VariableProximity";
 import { motion } from "framer-motion";
 import { Shield, Zap, TrendingUp, Code, Globe, Terminal } from "lucide-react";
+import { useRef } from "react";
 
 export default function LandingPage() {
+  const terminalSectionRef = useRef<HTMLElement>(null);
   return (
     <main className="min-h-screen bg-black text-white font-sans selection:bg-purple-500/30 overflow-x-hidden">
       {/* Navigation */}
@@ -414,6 +418,38 @@ $ judge submission upload --repo ./my-dapp
 ⠼ Signing on-chain proof...
 ✔ Transaction: 4jA1...z9Xp`}
              </pre>
+          </div>
+        </div>
+      </section>
+
+      {/* CLI Interaction Section */}
+      <section 
+        ref={terminalSectionRef}
+        className="py-24 px-8 border-t border-white/5 bg-black relative overflow-hidden"
+      >
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-600/5 blur-[120px] rounded-full pointer-events-none" />
+        
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-black mb-6 uppercase tracking-tighter">
+              <VariableProximity
+                label="EXPLORE THE JUDGENODE SDK"
+                className="variable-proximity-demo"
+                fromFontVariationSettings="'wght' 400, 'opsz' 9"
+                toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                containerRef={terminalSectionRef}
+                radius={200}
+                falloff="linear"
+              />
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
+              Everything you need to interact with the JudgeNode protocol, right from your terminal. 
+              Deploy, verify, and mint certificates with one command.
+            </p>
+          </div>
+          
+          <div className="max-w-5xl mx-auto">
+            <TerminalCLI />
           </div>
         </div>
       </section>
