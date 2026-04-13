@@ -29,25 +29,26 @@ export async function POST(request: Request) {
       // We do not fail the request if the DB is down, we still send the internal email alert.
     }
     
-    // We use the email provided for both sending and receiving 
-    const USER_EMAIL = 'amitsinghironman@gmail.com';
+    // Configuration from environment
+    const EMAIL_USER = process.env.EMAIL_USER || 'amitsinghironman@gmail.com';
+    const EMAIL_TO = process.env.EMAIL_TO || EMAIL_USER;
 
     if (!process.env.EMAIL_PASS) {
       console.error("Missing EMAIL_PASS in .env.local file");
-      return NextResponse.json({ message: "Server configuration error." }, { status: 500 });
+      return NextResponse.json({ message: "Server configuration error: Missing credentials." }, { status: 500 });
     }
 
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: USER_EMAIL, 
+        user: EMAIL_USER, 
         pass: process.env.EMAIL_PASS, 
       },
     });
 
     const mailOptions = {
-      from: USER_EMAIL,
-      to: USER_EMAIL, 
+      from: EMAIL_USER,
+      to: EMAIL_TO, 
       subject: `[LEAD] Enterprise Demo Request - ${data.organization || 'JudgeNod'}`,
       replyTo: data.email, // Standard reply hooks to the prospect
       html: `
