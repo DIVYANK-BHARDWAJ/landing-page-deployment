@@ -14,6 +14,7 @@ import VariableProximity from "@/components/VariableProximity";
 import { motion } from "framer-motion";
 import { Shield, Zap, TrendingUp, Code, Globe, Terminal } from "lucide-react";
 import { useRef } from "react";
+import Link from "next/link";
 
 export default function LandingPage() {
   const terminalSectionRef = useRef<HTMLElement>(null);
@@ -38,9 +39,9 @@ export default function LandingPage() {
           <a href="#" className="hover:text-white transition-colors">Docs</a>
           <a href="#" className="hover:text-white transition-colors">Pricing</a>
         </div>
-        <button className="px-6 py-2 bg-white text-black text-sm font-black rounded-none hover:bg-purple-500 hover:text-white transition-all active:scale-95 border-b-4 border-gray-300 hover:border-purple-700">
+        <Link href="/contact" className="px-6 py-2 bg-white text-black text-sm font-black rounded-none hover:bg-purple-500 hover:text-white transition-all active:scale-95 border-b-4 border-gray-300 hover:border-purple-700">
           Let's Talk
-        </button>
+        </Link>
       </nav>
 
       {/* Hero Section */}
