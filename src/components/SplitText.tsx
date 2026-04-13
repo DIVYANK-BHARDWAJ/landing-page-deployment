@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect, useState, useMemo } from 'react';
+import React, { useRef, useEffect, useState, useMemo } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 
@@ -16,7 +16,7 @@ interface SplitTextProps {
   threshold?: number;
   rootMargin?: string;
   textAlign?: 'left' | 'center' | 'right';
-  tag?: keyof JSX.IntrinsicElements;
+  tag?: keyof React.JSX.IntrinsicElements;
   onLetterAnimationComplete?: () => void;
   showCallback?: boolean;
 }
@@ -35,7 +35,7 @@ const SplitText: React.FC<SplitTextProps> = ({
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   rootMargin = '-100px',
   textAlign = 'center',
-  tag: Tag = 'p',
+  tag: Tag = 'p' as any,
   onLetterAnimationComplete
 }) => {
   const containerRef = useRef<HTMLElement>(null);

@@ -235,7 +235,10 @@ const Shuffle = ({
           if (!strip) return;
           const kids = Array.from(strip.children);
           for (let i = 1; i < kids.length - 1; i++) {
-            kids[i].textContent = scrambleCharset.charAt(Math.floor(Math.random() * scrambleCharset.length));
+            const kid = kids[i] as HTMLElement;
+            if (kid) {
+              kid.textContent = scrambleCharset.charAt(Math.floor(Math.random() * scrambleCharset.length));
+            }
           }
         });
       };
